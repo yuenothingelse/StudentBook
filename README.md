@@ -1,76 +1,78 @@
-# Student Book 📚
+<div align="center">
 
-A Java-based command-line application for managing student records. This project demonstrates Object-Oriented Programming (OOP), basic control flow, and TXT file handling for persistent data storage.
+# Student Book
 
-## 📌 Application Identity
+**A Java CLI application for student record management**
 
-- **Project name:** Student Book
-- **Repository name:** `StudentBook`
-- **Application type:** Command-Line Interface (CLI)
-- **Language:** Java
-- **Data storage:** Plain-text file (`mahasiswa.txt`)
+Built to practice Object-Oriented Programming, control flow, and TXT file handling.
 
-## 🎯 Purpose
+</div>
 
-Student Book is designed to make basic student data management simple through a terminal menu. It was developed as a learning project to practice Java fundamentals, including classes and objects, methods, conditional statements, loops, input handling, and file I/O.
+---
 
-## ✨ Features
+## Overview
 
-- **Add student records** — enter a student's name, NIM, and grade.
-- **Display student records** — view the students currently stored in the application.
-- **Search by NIM** — find a student using their student identification number.
-- **View statistics** — see a summary of student grades.
-- **Delete student records** — remove a record using its NIM.
-- **Evaluate passing status** — determine whether a student passes based on the application's grade threshold.
-- **Persistent storage** — load records from and save records to `mahasiswa.txt`, so valid records can remain available after the application closes.
+Student Book is a command-line application for managing student records. It provides a simple menu to add, display, search, and delete student data, as well as view grade statistics.
 
-> Passing threshold: a grade of **60 or higher** is considered passing.
+The project was created as a Java learning exercise covering fundamental programming concepts and persistent local storage.
 
-## 🧰 Technologies Used
+## Features
 
-- **Java** — application logic and object-oriented programming.
-- **Java standard library** — `Scanner` for terminal input and file I/O classes such as `FileReader`, `BufferedReader`, `FileWriter`, and `BufferedWriter`.
-- **TXT file** — simple local storage for student records.
-- **Git and GitHub** — source-code version control and repository hosting.
+- Add student records with a name, NIM, and grade
+- Display all saved student records
+- Search for a student by NIM
+- View student grade statistics
+- Delete a student record by NIM
+- Evaluate passing status based on the grade threshold
+- Save and load records through `mahasiswa.txt`
 
-## 📁 Project Structure
+**Passing threshold:** A grade of **60 or higher** is considered passing.
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Java | Application logic and object-oriented programming |
+| Java standard library | Terminal input and file handling |
+| TXT file | Local storage for student records |
+| Git and GitHub | Version control and source-code hosting |
+
+## Project Structure
 
 ```text
-StudentBook/
+student-book/
 ├── Main.java          # Main menu and application flow
 ├── Mahasiswa.java     # Student data and related methods
 ├── mahasiswa.txt      # Student records (created/updated by the app)
 └── README.md          # Project documentation
 ```
 
-`mahasiswa.txt` may be created when the application saves data. If the file does not exist, the application can initialize its starting data according to the program logic.
+The `mahasiswa.txt` file may be created when the application saves data. If it does not exist, the application follows its startup logic to initialize data.
 
-## ⚙️ Requirements
+## Requirements
 
-- Java Development Kit (JDK) installed.
-- A terminal application.
-- Git is optional if you download the source code as a ZIP file.
+- Java Development Kit (JDK)
+- Terminal application
+- Git (optional, if downloading the source as a ZIP)
 
-Check that Java is available:
+Verify your Java installation:
 
 ```bash
 java -version
 javac -version
 ```
 
-If either command is unavailable, install a JDK and configure it for your operating system.
-
-## 🚀 Installation and Setup
+## Installation and Setup
 
 ### 1. Clone the repository
 
-Replace `YOUR_USERNAME` with your GitHub username:
+Replace `YOUR_USERNAME` with your GitHub username.
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/student-book.git
 ```
 
-### 2. Enter the project directory
+### 2. Open the project directory
 
 ```bash
 cd student-book
@@ -88,55 +90,66 @@ javac Main.java Mahasiswa.java
 java Main
 ```
 
-Run the commands from the project directory so the application reads and writes `mahasiswa.txt` in the expected location.
+Run these commands from the project directory so the application can find and update `mahasiswa.txt` in the expected location.
 
-## 💻 Example Usage
+## Usage
 
-After running `java Main`, follow the menu displayed in the terminal. The available menu options include:
+Start the application with `java Main` and choose an option from the terminal menu.
 
-1. Add a student.
-2. Display all students.
-3. Search for a student by NIM.
-4. View grade statistics.
-5. Delete a student by NIM.
-6. Exit the application.
+| Menu option | Action |
+|---|---|
+| Add student | Enter a student's name, NIM, and grade |
+| Display students | View saved student records |
+| Search by NIM | Find a student using their NIM |
+| Statistics | View a summary of student grades |
+| Delete by NIM | Remove a student record |
+| Exit | Close the application |
 
-### Example student data
+### Example record
 
 ```text
-Name : Andi Pratama
-NIM  : 2301001
-Grade: 85.5
+Name  : Andi Pratama
+NIM   : 2301001
+Grade : 85.5
 ```
 
-A record is stored in `mahasiswa.txt` using this format:
+Records are stored in `mahasiswa.txt` in the following format:
 
 ```text
 Andi Pratama|2301001|85.5
 ```
 
-The fields are separated by the `|` character: `name|NIM|grade`. Use the application's menu to add, search for, display, or delete records.
+Each line represents one student. The fields are separated by the `|` character and follow this order:
 
-## 🧠 Concepts Demonstrated
+```text
+name|NIM|grade
+```
 
-- **Class and object:** student records are represented by the `Mahasiswa` class and its objects.
-- **Encapsulation and methods:** student data and related operations are organized in a class.
-- **Conditional statements:** used to evaluate passing status and handle menu choices.
-- **Loops:** used to keep the menu running and process records.
-- **Input validation:** user input is checked where implemented in the program.
-- **File handling:** records are read from and written to a local TXT file.
+Use the application's menu to manage records rather than changing the file format manually.
 
-## 📝 Notes and Limitations
+## Java Concepts Demonstrated
 
-- This is a local CLI application; it does not use a database server.
-- The TXT file is stored relative to the directory from which the application is run.
-- Avoid manually changing the file format. Each record should use `name|NIM|grade`, with one student per line.
-- This project is intended for learning and demonstration, not as a production student information system.
+- **Classes and objects** — represent student records using the `Mahasiswa` class
+- **Methods** — organize student-related operations
+- **Conditional statements** — handle menu choices and passing status
+- **Loops** — keep the menu running and process records
+- **Input handling** — receive data from the terminal
+- **File handling** — read and write student records in a TXT file
 
-## 👨‍💻 Author
+## Limitations
+
+- Data is stored locally in a text file; no database server is used.
+- The application runs in the terminal and does not provide a graphical interface.
+- The project is intended for learning and demonstration, not as a production student information system.
+
+## Author
 
 Created as a Java programming and Object-Oriented Programming learning project.
 
 ---
 
-If you find this project useful for learning Java fundamentals, feel free to explore the source code and adapt it for practice.
+<div align="center">
+
+**Student Book** · Java CLI Project
+
+</div>
