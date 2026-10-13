@@ -1,18 +1,16 @@
 ```text
- _____ _             _            _   ____              _
-/  ___| |_ _   _  __| | ___ _ __ | |_| __ )  ___   ___ | | __
-\___ \| __| | | |/ _` |/ _ \ '_ \| __|  _ \ / _ \ / _ \| |/ /
- ___) | |_| |_| | (_| |  __/ | | | |_| |_) | (_) | (_) |   <
-|____/ \__|\__,_|\__,_|\___|_| |_|\__|____/ \___/ \___/|_|\_\
+ ███████╗████████╗██╗   ██╗██████╗ ███████╗███╗   ██╗████████╗   ██████╗  ██████╗  ██████╗ ██╗  ██╗
+ ██╔════╝╚══██╔══╝██║   ██║██╔══██╗██╔════╝████╗  ██║╚══██╔══╝   ██╔══██╗██╔═══██╗██╔═══██╗██║ ██╔╝
+ ╚█████╗    ██║   ██║   ██║██║  ██║█████╗  ██╔██╗ ██║   ██║      ██████╔╝██║   ██║██║   ██║█████╔╝
+  ╚═══██╗   ██║   ██║   ██║██║  ██║██╔══╝  ██║╚██╗██║   ██║      ██╔══██╗██║   ██║██║   ██║██╔═██╗
+ ██████╔╝   ██║   ╚██████╔╝██████╔╝███████╗██║ ╚████║   ██║      ██████╔╝╚██████╔╝╚██████╔╝██║  ██╗
+ ╚═════╝    ╚═╝    ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝      ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝
 ```
 
 Student Book is a CLI application for managing student records. It provides a simple menu to add, display, search, and delete student data, as well as view grade statistics.
 
-The project was created as a Java learning exercise covering fundamental programming concepts and persistent local storage.
-
 ## Features
 
-```text
 - Add student records with a name, NIM, and grade
 - Display all saved student records
 - Search for a student by NIM
@@ -20,7 +18,6 @@ The project was created as a Java learning exercise covering fundamental program
 - Delete a student record by NIM
 - Evaluate passing status based on the grade threshold
 - Save and load records through `mahasiswa.txt`
-```
 
 **Passing threshold:** A grade of **60 or higher** is considered passing.
 
@@ -47,11 +44,9 @@ The `mahasiswa.txt` file may be created when the application saves data. If it d
 
 ## Requirements
 
-```text
 - Java Development Kit (JDK)
 - Terminal application
 - Git (optional, if downloading the source as a ZIP)
-```
 
 ### RUN
 
@@ -77,14 +72,12 @@ Start the application with `java Main` and choose an option from the terminal me
 
 ## Java Concepts Demonstrated
 
-```text
 - **Classes and objects**    : represent student records using the `Mahasiswa` class
 - **Methods**                : organize student-related operations
 - **Conditional statements** : handle menu choices and passing status
 - **Loops**                  : keep the menu running and process records
 - **Input handling**         : receive data from the terminal
 - **File handling**          : read and write student records in a TXT file
-```
 
 ## Limitations
 
